@@ -28,15 +28,15 @@ class Tanker {
       launcherY = pos.y - ((this.height-100) * sin(angle))
 
 
-      if(keyIsDown(DOWN_ARROW)){
+      if(keyIsDown(32)){
           Matter.Body.setPosition(canonBall.body, {x: launcherX -100 , y: launcherY +100})
       }
 
-      if(keyIsDown(DOWN_ARROW) && angle >= -0.050){
+      if(keyIsDown(32) && angle >= -0.050){
         Matter.Body.setPosition(canonBall.body,{x:launcherX -100 ,y:launcherY})
       }
 
-      if(keyIsDown(DOWN_ARROW) && angle <= -1.40){
+      if(keyIsDown(32) && angle <= -1.40){
         Matter.Body.setPosition(canonBall.body,{x:launcherX  ,y:launcherY + 100})
       }
       push();

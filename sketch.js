@@ -56,16 +56,16 @@ shoot.display();
 if(keyIsDown(UP_ARROW)){
     shoot.attach(canonBall.body)
   }
-  fill("green");
-   textSize(20);
+  fill("blue");
+   textSize(25);
    text("Use the Left and Right Arrow keys to aim",20,46);
-   text("Use the Up Arrow key to reload and use the Down Arrow key to shoot",20,76);
+   text("Use the Up Arrow key to reload and use spacebar to launch the ball",20,76);
 }
 
 
 function keyReleased() {
     // Call the shoot method for the cannon.
-    if (keyCode === DOWN_ARROW) {
+    if (keyCode === 32) {
         flag = "launch"
     
         shoot.shoot();
